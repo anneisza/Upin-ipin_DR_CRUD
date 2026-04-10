@@ -1,6 +1,6 @@
 ﻿namespace CRUDMahasiswaADO
 {
-    partial class Form1
+    partial class FormMahasiswa
     {
         /// <summary>
         /// Required designer variable.
@@ -218,7 +218,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(635, 137);
             this.dataGridView1.TabIndex = 20;
             // 
-            // Form1
+            // FormMahasiswa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -242,7 +242,7 @@
             this.Controls.Add(this.label_2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "FormMahasiswa";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

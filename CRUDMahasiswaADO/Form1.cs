@@ -12,7 +12,7 @@ using System.Data.SqlClient;
 
 namespace CRUDMahasiswaADO
 {
-    public partial class Form1 : Form
+    public partial class FormMahasiswa : Form
     {
 
         private readonly SqlConnection conn;
@@ -20,10 +20,12 @@ namespace CRUDMahasiswaADO
             "Data Source=RIZA\\RIZAFI;Initial Catalog=DBAkademikADO;Integrated Security=True";
 
 
-        public Form1()
+        public FormMahasiswa()
         {
             InitializeComponent();
+            conn = new SqlConnection(connectionString);
         }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
