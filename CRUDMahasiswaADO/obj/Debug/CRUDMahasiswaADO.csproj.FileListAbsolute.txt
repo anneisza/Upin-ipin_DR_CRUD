@@ -1,0 +1,10 @@
+E:\UMY\SEMESTER 4\4. PABD\@PRAKTIKUM\Pertemuan 6\Activity 4\CRUDMahasiswaADO\CRUDMahasiswaADO\bin\Debug\CRUDMahasiswaADO.exe.config
+E:\UMY\SEMESTER 4\4. PABD\@PRAKTIKUM\Pertemuan 6\Activity 4\CRUDMahasiswaADO\CRUDMahasiswaADO\bin\Debug\CRUDMahasiswaADO.exe
+E:\UMY\SEMESTER 4\4. PABD\@PRAKTIKUM\Pertemuan 6\Activity 4\CRUDMahasiswaADO\CRUDMahasiswaADO\bin\Debug\CRUDMahasiswaADO.pdb
+E:\UMY\SEMESTER 4\4. PABD\@PRAKTIKUM\Pertemuan 6\Activity 4\CRUDMahasiswaADO\CRUDMahasiswaADO\obj\Debug\CRUDMahasiswaADO.csproj.AssemblyReference.cache
+E:\UMY\SEMESTER 4\4. PABD\@PRAKTIKUM\Pertemuan 6\Activity 4\CRUDMahasiswaADO\CRUDMahasiswaADO\obj\Debug\CRUDMahasiswaADO.FormMahasiswa.resources
+E:\UMY\SEMESTER 4\4. PABD\@PRAKTIKUM\Pertemuan 6\Activity 4\CRUDMahasiswaADO\CRUDMahasiswaADO\obj\Debug\CRUDMahasiswaADO.Properties.Resources.resources
+E:\UMY\SEMESTER 4\4. PABD\@PRAKTIKUM\Pertemuan 6\Activity 4\CRUDMahasiswaADO\CRUDMahasiswaADO\obj\Debug\CRUDMahasiswaADO.csproj.GenerateResource.cache
+E:\UMY\SEMESTER 4\4. PABD\@PRAKTIKUM\Pertemuan 6\Activity 4\CRUDMahasiswaADO\CRUDMahasiswaADO\obj\Debug\CRUDMahasiswaADO.csproj.CoreCompileInputs.cache
+E:\UMY\SEMESTER 4\4. PABD\@PRAKTIKUM\Pertemuan 6\Activity 4\CRUDMahasiswaADO\CRUDMahasiswaADO\obj\Debug\CRUDMahasiswaADO.exe
+E:\UMY\SEMESTER 4\4. PABD\@PRAKTIKUM\Pertemuan 6\Activity 4\CRUDMahasiswaADO\CRUDMahasiswaADO\obj\Debug\CRUDMahasiswaADO.pdb

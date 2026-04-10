@@ -16,10 +16,8 @@ namespace CRUDMahasiswaADO
     {
 
         private readonly SqlConnection conn;
-        private readonly string connectionString = 
+        private readonly string connectionString =
             "Data Source=RIZA\\RIZAFI;Initial Catalog=DBAkademikADO;Integrated Security=True";
-
-
         public FormMahasiswa()
         {
             InitializeComponent();
@@ -47,7 +45,7 @@ namespace CRUDMahasiswaADO
             ConnectDatabase();
         }
 
-        private void btnLoadData_Click(object sender, EventArgs e)
+        private void btnLoad_Click(object sender, EventArgs e)
         {
             try
             {
@@ -55,14 +53,14 @@ namespace CRUDMahasiswaADO
                 {
                     conn.Open();
                 }
-                
+
                 dataGridView1.Rows.Clear();
                 dataGridView1.Columns.Clear();
 
                 dataGridView1.Columns.Add("NIM", "NIM");
                 dataGridView1.Columns.Add("Nama", "Nama");
                 dataGridView1.Columns.Add("JenisKelamin", "Jenis Kelamin");
-                dataGridView1.Columns.Add("TanggalLahir", "Tanggal Lahir");
+                dataGridView1.Columns.Add("Tanggallahir", "Tanggal Lahir");
                 dataGridView1.Columns.Add("Alamat", "Alamat");
                 dataGridView1.Columns.Add("KodeProdi", "Kode Prodi");
 
@@ -77,7 +75,7 @@ namespace CRUDMahasiswaADO
                         reader["NIM"].ToString(),
                         reader["Nama"].ToString(),
                         reader["JenisKelamin"].ToString(),
-                        Convert.ToDateTime(reader["TanggalLahir"]).ToShortDateString(),
+                        Convert.ToDateTime(reader["Tanggallahir"]).ToShortDateString(),
                         reader["Alamat"].ToString(),
                         reader["KodeProdi"].ToString()
                     );
@@ -129,16 +127,16 @@ namespace CRUDMahasiswaADO
                 }
 
                 string query = @"INSERT INTO Mahasiswa
-                                (NIM, Nama, JenisKelamin, TanggalLahir, Alamat, KodeProdi, TanggalDaftar)
+                                (NIM, Nama, JenisKelamin, Tanggallahir, Alamat, KodeProdi, TanggalDaftar)
                                VALUES 
-                                (@NIM, @Nama, @JK, @TanggalLahir, @Alamat, @KodeProdi, @TanggalDaftar)";
+                                (@NIM, @Nama, @JK, @Tanggallahir, @Alamat, @KodeProdi, @TanggalDaftar)";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("@NIM", txtNIM.Text);
                 cmd.Parameters.AddWithValue("@Nama", txtNama.Text);
                 cmd.Parameters.AddWithValue("@JK", cmbJK.Text);
-                cmd.Parameters.AddWithValue("@TanggalLahir", dtpTanggalLahir.Value.Date);
+                cmd.Parameters.AddWithValue("@Tanggallahir", dtpTanggalLahir.Value.Date);
                 cmd.Parameters.AddWithValue("@Alamat", txtAlamat.Text);
                 cmd.Parameters.AddWithValue("@KodeProdi", txtKodeProdi.Text);
                 cmd.Parameters.AddWithValue("@TanggalDaftar", DateTime.Now);
@@ -174,7 +172,7 @@ namespace CRUDMahasiswaADO
                 string query = @"UPDATE Mahasiswa 
                                 SET Nama = @Nama, 
                                 JenisKelamin = @JK, 
-                                TanggalLahir = @TanggalLahir, 
+                                Tanggallahir = @Tanggallahir, 
                                 Alamat = @Alamat, 
                                 KodeProdi = @KodeProdi
                                WHERE NIM = @NIM";
@@ -184,7 +182,7 @@ namespace CRUDMahasiswaADO
                 cmd.Parameters.AddWithValue("@NIM", txtNIM.Text);
                 cmd.Parameters.AddWithValue("@Nama", txtNama.Text);
                 cmd.Parameters.AddWithValue("@JK", cmbJK.Text);
-                cmd.Parameters.AddWithValue("@TanggalLahir", dtpTanggalLahir.Value.Date);
+                cmd.Parameters.AddWithValue("@Tanggallahir", dtpTanggalLahir.Value.Date);
                 cmd.Parameters.AddWithValue("@Alamat", txtAlamat.Text);
                 cmd.Parameters.AddWithValue("@KodeProdi", txtKodeProdi.Text);
 
@@ -216,10 +214,10 @@ namespace CRUDMahasiswaADO
                 {
                     conn.Open();
                 }
-                
+
                 DialogResult resultConfirm = MessageBox.Show(
-                    "Yakin ingin menghapus data?", 
-                    "Konfirmasi", 
+                    "Yakin ingin menghapus data?",
+                    "Konfirmasi",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question);
 
@@ -260,7 +258,7 @@ namespace CRUDMahasiswaADO
                 txtNIM.Text = row.Cells["NIM"].Value.ToString();
                 txtNama.Text = row.Cells["Nama"].Value.ToString();
                 cmbJK.Text = row.Cells["JenisKelamin"].Value.ToString();
-                dtpTanggalLahir.Value = Convert.ToDateTime(row.Cells["TanggalLahir"].Value);
+                dtpTanggalLahir.Value = Convert.ToDateTime(row.Cells["Tanggallahir"].Value);
                 txtAlamat.Text = row.Cells["Alamat"].Value.ToString();
                 txtKodeProdi.Text = row.Cells["KodeProdi"].Value.ToString();
             }
@@ -277,7 +275,7 @@ namespace CRUDMahasiswaADO
             txtNIM.Focus();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void FormMahasiswa_Load(object sender, EventArgs e)
         {
             cmbJK.Items.Clear();
             cmbJK.Items.Add("L");
