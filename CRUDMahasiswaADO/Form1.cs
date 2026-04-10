@@ -7,14 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace CRUDMahasiswaADO
 {
     public partial class Form1 : Form
     {
+
+        private readonly SqlConnection conn;
+        private readonly string connectionString = 
+            "Data Source=RIZA\\RIZAFI;Initial Catalog=DBAkademikADO;Integrated Security=True";
+
+
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
