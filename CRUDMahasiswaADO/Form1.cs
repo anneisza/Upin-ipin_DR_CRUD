@@ -22,6 +22,7 @@ namespace CRUDMahasiswaADO
         {
             InitializeComponent();
             conn = new SqlConnection(connectionString);
+            dataGridView1.CellClick += new DataGridViewCellEventHandler(dataGridView1_CellClick);
         }
 
         private void ConnectDatabase()
