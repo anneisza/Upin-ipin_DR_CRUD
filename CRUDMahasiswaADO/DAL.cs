@@ -199,5 +199,21 @@ namespace CRUDMahasiswaADO
             command.CommandType = CommandType.StoredProcedure;
             command.ExecuteNonQuery();
         }
+
+        public DataTable getProdi()
+        {
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+
+            SqlCommand cmd = new SqlCommand("select NamaProdi from ProgramStudi", conn);
+            cmd.CommandType = CommandType.Text;
+            dtProdi = new DataTable();
+            da = new SqlDataAdapter(cmd);
+            da.Fill(dtProdi);
+
+            return dtProdi;
+        }
     }
 }
