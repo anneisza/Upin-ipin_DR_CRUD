@@ -11,7 +11,11 @@ namespace CRUDMahasiswaADO
 {
     public class DAL
     {
-        
+        //static string connectionString = "Data Source=RIZA\\RIZAFI;Initial Catalog=DBAkademikADO;User ID=sa;Password=anneiszA1.";
+
+        SqlDataAdapter da;
+        DataTable dtMahasiswa;
+        DataTable dtProdi;
 
     }
 }
