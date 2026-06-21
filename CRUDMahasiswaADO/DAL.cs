@@ -187,6 +187,17 @@ namespace CRUDMahasiswaADO
             return dtMahasiswa;
         }
 
+        public void InsertLog(string message)
+        {
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+            SqlCommand command = new SqlCommand("sp_LogMessage", conn);
 
+            command.Parameters.AddWithValue("psn", message);
+            command.CommandType = CommandType.StoredProcedure;
+            command.ExecuteNonQuery();
+        }
     }
 }
